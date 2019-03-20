@@ -1,7 +1,7 @@
 function myFunction() {
 
-var sheet = SpreadsheetApp.getActiveSheet();
-var lastRow = sheet.getLastRow();
+  var sheet = SpreadsheetApp.getActiveSheet();
+  var lastRow = sheet.getLastRow();
   for(var i = 2 ; i < lastRow ; i++){  
     testGET(sheet.getRange(i,1).getValue(),lastRow,i)
   }
@@ -9,7 +9,6 @@ var lastRow = sheet.getLastRow();
 
 function testGET(query,lastRow , i) {
   
- 
   var url = 'https://www.googleapis.com/books/v1/volumes?q=isbn:' + query +'&country=US';
   
   var options =
